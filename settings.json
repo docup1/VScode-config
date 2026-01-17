@@ -1,94 +1,99 @@
 {
-  // 1. ОСНОВНАЯ ТЕМА И ИКОНКИ
+  // --- 1. ТЕМА И ГРАФИКА ---
   "workbench.colorTheme": "Bearded Theme Surprising Blueberry",
   "workbench.iconTheme": "vscode-great-icons",
-  "material-icon-theme.hidesExplorerArrows": true,
   "workbench.productIconTheme": "a-file-icon-vscode-product-icon-theme",
-
-  // 2. ИНТЕРФЕЙС (WORKBENCH)
-  "workbench.startupEditor": "none",
+  "material-icon-theme.hidesExplorerArrows": true,
+  "window.titleBarStyle": "native",
+  "window.zoomLevel": 0.6,
+"update.mode": "none",
   "workbench.tips.enabled": false,
-  "breadcrumbs.enabled": false,
   "workbench.statusBar.visible": false,
-  "window.commandCenter": true,
   "workbench.layoutControl.enabled": false,
-  "workbench.editor.editorActionsLocation": "titleBar",
+  "window.commandCenter": false,
+  "breadcrumbs.enabled": false,
+  "scm.diffDecorations": "none",
+  "git.decorations.enabled": false,
 
-  // 3. БОКОВАЯ ПАНЕЛЬ И ПРОВОДНИК
+  // --- 3. ПРОВОДНИК (SIDEBAR) ---
   "workbench.sideBar.location": "left",
-  "workbench.tree.enableStickyScroll": true,
-  "workbench.tree.renderIndentGuides": "none",
   "workbench.tree.indent": 12,
+  "workbench.tree.renderIndentGuides": "none",
+  "workbench.tree.enableStickyScroll": true,
   "explorer.compactFolders": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
   "explorer.decorations.badges": false,
-  "git.decorations.enabled": false,
 
-  // 4. ОКНО, МАСШТАБ И ШРИФТЫ
-  "window.zoomLevel": 0.6,
-  "window.titleBarStyle": "native",
-  "editor.fontFamily": "Hack Nerd Font, Fira Code, 'Courier New', monospace",
+  // --- 4. РЕДАКТОР (ЧИСТЫЙ ХОЛСТ) ---
   "editor.fontSize": 12,
-  "editor.fontLigatures": true,
   "editor.lineHeight": 1.8,
-
-  // 5. НАСТРОЙКИ КУРСОРA (СТАТИЧНЫЙ ГРАДИЕНТ)
-  "editor.cursorBlinking": "solid",
-  "editor.cursorSmoothCaretAnimation": "explicit",
-  "editor.cursorStyle": "line",
-  "editor.cursorWidth": 2,
+  "editor.fontFamily": "Hack Nerd Font, Fira Code, 'Courier New', monospace",
+  "editor.fontLigatures": true,
   "editor.mouseWheelZoom": true,
   "editor.smoothScrolling": true,
+  "editor.cursorStyle": "line",
+  "editor.cursorWidth": 2,
+  "editor.cursorBlinking": "solid",
+  "editor.cursorSmoothCaretAnimation": "explicit",
 
-  // 6. ПРЕДЛОЖЕНИЯ (ВАЖНО ДЛЯ ПОДСВЕТКИ ВНУТРИ СТРОК)
-  "editor.quickSuggestions": {
-    "other": "on",
-    "comments": "on",
-    "strings": "on" // Позволяет плагинам внедряться в строки
-  },
-
-  // 7. ОЧИСТКА РЕДАКТОРА
-  "editor.stickyScroll.enabled": false,
+  // Отключение визуального шума
+  "editor.renderLineHighlight": "none",
+  "editor.renderWhitespace": "none",
+  "editor.guides.indentation": false,
+  "editor.matchBrackets": "never",
+  "editor.occurrencesHighlight": "off",
+  "editor.selectionHighlight": false,
   "editor.colorDecorators": false,
   "editor.codeLens": false,
   "editor.links": false,
-  "editor.matchBrackets": "never",
-  "editor.parameterHints.enabled": false,
-  "editor.lightbulb.enabled": "off",
   "editor.hover.enabled": "off",
-  "editor.guides.indentation": false,
-  "editor.renderWhitespace": "none",
-  "editor.renderLineHighlight": "none",
-  "editor.occurrencesHighlight": "off",
-  "editor.selectionHighlight": false,
-  "editor.hideCursorInOverviewRuler": true,
+  "editor.lightbulb.enabled": "off",
+  "editor.parameterHints.enabled": false,
+  "editor.stickyScroll.enabled": false,
   "editor.showFoldingControls": "never",
+  "editor.hideCursorInOverviewRuler": true,
   "editor.scrollbar.horizontal": "hidden",
   "editor.scrollbar.vertical": "hidden",
 
-  // 8. ФОРМАТИРОВАНИЕ
-  "files.trimTrailingWhitespace": true,
-  "files.insertFinalNewline": true,
+  // --- 5. ТЕРМИНАЛ ---
+  "terminal.integrated.tabs.enabled": false,
+  "terminal.integrated.tabs.showActions": "always",
+  "terminal.integrated.gpuAcceleration": "off",
+
+  // --- 6. ПОВЕДЕНИЕ И ФОРМАТИРОВАНИЕ ---
   "files.autoSave": "afterDelay",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
   "editor.tabSize": 4,
   "editor.detectIndentation": false,
   "editor.tabCompletion": "on",
   "editor.acceptSuggestionOnEnter": "off",
   "emmet.triggerExpansionOnTab": true,
-  "scm.diffDecorations": "none",
-  "update.mode": "none",
+  "diffEditor.ignoreTrimWhitespace": true,
 
-  // 9. APC CUSTOM UI (СТИЛИ И ГРАДИЕНТЫ)
-  "custom-ui-style.electron": {
-    "trafficLightPosition": { "x": 14, "y": 14 },
-    "titleBarStyle": "hiddenInset",
-    ".tab": "border: none !important; background: transparent !important;",
-    ".tab.active": "background: #1a1523 !important; border-bottom: 2px solid #DA70D6 !important;",
-    ".part.sidebar": "border-right: none !important;",
-    ".monaco-separator": "display: none !important;"
+  // Поддержка инъекций кода в строки (требует расширение tobermory.es6-string-html)
+  "editor.quickSuggestions": {
+    "other": "on",
+    "comments": "on",
+    "strings": "on"
+  },
+  "es6-string-html.languages": {
+    "sql": ["sql", "SQL", "mysql", "postgresql", "pg", "query"],
+    "css": ["css", "CSS", "style", "styled"],
+    "html": ["html", "HTML", "xml"]
   },
 
+  // --- 7. КАСТОМИЗАЦИЯ ЦВЕТОВ (CSS-IN-JSON) ---
+  "workbench.colorCustomizations": {
+    "editorCursor.background": "#000000",
+    "editorOverviewRuler.border": "#00000000",
+    "commandCenter.background": "#00000000",
+    "commandCenter.border": "#00000000",
+    "widget.shadow": "#00000000"
+  },
+
+  // Настройки для расширения Custom UI Style (если установлено)
   "custom-ui-style.stylesheet": {
     ".quick-input-widget": "top: 50% !important; left: 50% !important; transform: translate(-50%, -50%) !important; width: 600px !important; box-shadow: 0 0 100px rgba(0,0,0,0.8), 0 0 30px rgba(218, 112, 214, 0.2) !important; border-radius: 16px !important; border: 1px solid rgba(255, 255, 255, 0.1) !important; background-color: rgba(26, 21, 35, 0.95) !important; backdrop-filter: blur(20px);",
     ".quick-input-list .scrollbar": "display: none",
@@ -100,24 +105,11 @@
     ".monaco-editor .cursors-layer .cursor-primary": "transition: all 0.05s !important;",
     ".title-actions": "opacity: 0; transition: opacity 0.2s ease !important;",
     ".title-actions:hover": "opacity: 1 !important;",
-    ".monaco-scrollable-element > .shadow.top": "display: none",
-    ".sidebar": "border: none !important"
+    ".monaco-scrollable-element > .shadow.top": "display: none"
   },
 
-  // 10. ЦВЕТОВАЯ КАСТОМИЗАЦИЯ
-  "workbench.colorCustomizations": {
-    "editorCursor.background": "#000000",
-    "editorOverviewRuler.border": "#0000",
-    "commandCenter.background": "#00000000",
-    "commandCenter.border": "#00000000",
-    "widget.shadow": "#00000000"
-  },
-
-  // 11. НАСТРОЙКА ЯЗЫКОВ ВНУТРИ СТРОК
-  // Чтобы работало, установите расширение: tobermory.es6-string-html
-  "es6-string-html.languages": {
-    "sql": ["sql", "SQL", "mysql", "postgresql", "pg", "query"],
-    "css": ["css", "CSS", "style", "styled"],
-    "html": ["html", "HTML", "xml"]
-  }
+  // --- 8. ЯЗЫКОВЫЕ СПЕЦИФИКАЦИИ ---
+  "omnisharp.dotNetCliPaths": [
+    "/opt/homebrew/bin/dotnet"
+  ]
 }
