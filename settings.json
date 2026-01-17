@@ -1,0 +1,148 @@
+{
+  // --- Основной вид и Тема ---
+  "workbench.colorTheme": "Bearded Theme Surprising Blueberry",
+  "workbench.iconTheme": "vscode-great-icons",
+  "material-icon-theme.hidesExplorerArrows": true,
+
+  // --- Интерфейс (Workbench) ---
+  "workbench.startupEditor": "none",
+  "workbench.tips.enabled": false,
+  "breadcrumbs.enabled": false,
+  "workbench.statusBar.visible": false,
+
+  // Настройка Activity Bar (Панель слева)
+  // "top" переносит иконки в верхнюю часть сайдбара, делая вид супер-компактным
+  "workbench.sideBar.location": "left",
+  "workbench.tree.enableStickyScroll": false,
+  "workbench.tree.renderIndentGuides": "none",
+  "workbench.tree.indent": 12, // Чуть увеличил отступ для читаемости
+
+  // --- Проводник (Explorer) ---
+  "explorer.compactFolders": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "explorer.decorations.badges": false,
+  "git.decorations.enabled": false,
+
+  // --- Окно и Зум ---
+"window.zoomLevel": 0.6,
+  "window.titleBarStyle": "native",
+
+  // --- Редактор: Шрифты и Курсор ---
+  "editor.fontFamily": "Hack Nerd Font, Fira Code, 'Courier New', monospace",
+  "editor.fontSize": 12, // 10 слишком мелко при зуме 0.6, чуть поднял (можешь вернуть 10)
+  "editor.fontLigatures": true,
+  "editor.lineHeight": 1.8,
+
+  // ! ВАЖНО: Исправление масштабирования скроллом (Cmd/Ctrl + колесо)
+  "editor.mouseWheelZoom": true,
+
+  // Плавность и анимации (для красоты)
+  "editor.smoothScrolling": true,
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+
+  // Настройки курсора
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.cursorStyle": "line",
+  "editor.cursorWidth": 2,
+
+  // --- Редактор: Чистота (отключение шума) ---
+  "editor.stickyScroll.enabled": false,
+  "editor.colorDecorators": false, // Цветные квадратики у hex кодов
+  "editor.codeLens": false,
+  "editor.links": false, // Кликабельные ссылки
+  "editor.matchBrackets": "never",
+  "editor.parameterHints.enabled": false,
+  "editor.lightbulb.enabled": "off",
+  "editor.hover.enabled": "off", // Всплывающие подсказки
+  "editor.guides.indentation": false,
+  "editor.renderWhitespace": "none",
+  "editor.renderLineHighlight": "none",
+  "editor.occurrencesHighlight": "off",
+  "editor.selectionHighlight": false,
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.showFoldingControls": "never",
+
+  // Скроллбары
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.vertical": "hidden",
+
+  // --- Автодополнение и форматирование ---
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.autoSave": "afterDelay",
+  "editor.tabSize": 4,
+  "editor.detectIndentation": false,
+  "editor.quickSuggestions": {
+    "other": "off",
+    "comments": "off",
+    "strings": "off"
+  },
+  "editor.suggestOnTriggerCharacters": false,
+  "editor.tabCompletion": "on",
+  "editor.snippetSuggestions": "top",
+  "emmet.triggerExpansionOnTab": true,
+  "scm.diffDecorations": "none",
+  "extensions.ignoreRecommendations": true,
+  "update.mode": "none",
+
+  // --- Custom UI Style (APC Extension) ---
+  "custom-ui-style.electron": {
+    "titleBarStyle": "hiddenInset",
+    "trafficLightPosition": { "x": 14, "y": 14 }
+  },
+  "custom-ui-style.stylesheet": {
+    // Убирает лишние тени и отступы
+    ".notification-toast": "box-shadow: none !important",
+    ".quick-input-widget.show-file-icons": "box-shadow: none !important",
+    ".quick-input-widget": "top: 20vh !important; background: #100B15 !important;",
+    ".quick-input-list .scrollbar": "display: none",
+    ".monaco-action-bar.quick-input-inline-action-bar": "display: none",
+    ".editor-widget.find-widget": "box-shadow: none; border-radius: 4px; border: none !important;",
+    ".quick-input-titlebar": "display: none !important",
+
+    // Чистка сайдбара и заголовков
+    ".monaco-workbench .part.editor > .content .editor-group-container > .title.title-border-bottom:after": "display: none",
+    ".monaco-scrollable-element > .shadow.top": "display: none",
+    ".sidebar .title-label": "display: none !important", /* Скрывает название 'EXPLORER' */
+    ".sidebar": "border: none !important",
+
+    // Убирает обводки фокуса
+    ".monaco-workbench .monaco-list:not(.element-focused):focus:before": "outline: none !important",
+    ".monaco-list-row.focused": "outline: none !important",
+
+    // Градиентный курсор (твоя фишка)
+    ".monaco-editor .cursors-layer .cursor": "background-image: linear-gradient(135deg, #ffaffc 10%, #DA70D6 100%); box-shadow: 0 0 15px #DA70D6;",
+
+    // Скрытие кнопок в заголовках
+    ".title-actions": "display: none !important",
+    ".monaco-workbench .part.editor > .content .editor-group-container > .title > .label-container > .title-label": "padding-left: 10px",
+
+    // Убираем иконки файлов в табах для чистоты (опционально, если хочешь вернуть - удали строку ниже)
+    ".title .monaco-icon-label.file-icon": "margin: 0 10px"
+  },
+
+  // --- Настройка цветов UI ---
+  "workbench.colorCustomizations": {
+    "editorCursor.background": "#000000", // Нужно для работы CSS-курсора
+    "editorOverviewRuler.border": "#0000",
+
+    // Скрываем все лишние подсветки в полосе прокрутки
+    "editorOverviewRuler.wordHighlightStrongForeground": "#0000",
+    "editorOverviewRuler.selectionHighlightForeground": "#0000",
+    "editorOverviewRuler.rangeHighlightForeground": "#0000",
+    "editorOverviewRuler.wordHighlightForeground": "#0000",
+    "editorOverviewRuler.bracketMatchForeground": "#0000",
+    "editorOverviewRuler.findMatchForeground": "#0000",
+    "editorOverviewRuler.modifiedForeground": "#0000",
+    "editorOverviewRuler.deletedForeground": "#0000",
+    "editorOverviewRuler.warningForeground": "#0000",
+    "editorOverviewRuler.addedForeground": "#0000",
+    "editorOverviewRuler.errorForeground": "#0000",
+    "editorOverviewRuler.infoForeground": "#0000",
+
+
+},
+"workbench.productIconTheme": "a-file-icon-vscode-product-icon-theme"
+}
