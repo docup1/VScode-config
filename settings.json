@@ -1,64 +1,62 @@
 {
-  // --- Основной вид и Тема ---
+  // 1. ОСНОВНАЯ ТЕМА И ИКОНКИ
   "workbench.colorTheme": "Bearded Theme Surprising Blueberry",
   "workbench.iconTheme": "vscode-great-icons",
   "material-icon-theme.hidesExplorerArrows": true,
+  "workbench.productIconTheme": "a-file-icon-vscode-product-icon-theme",
 
-  // --- Интерфейс (Workbench) ---
+  // 2. ИНТЕРФЕЙС (WORKBENCH)
   "workbench.startupEditor": "none",
   "workbench.tips.enabled": false,
   "breadcrumbs.enabled": false,
   "workbench.statusBar.visible": false,
   "window.commandCenter": true,
   "workbench.layoutControl.enabled": false,
-  "workbench.editor.editorActionsLocation": "titleBar", // Переносит кнопки запуска (Run/Debug) в заголовок
-  // Настройка Activity Bar (Панель слева)
-  // "top" переносит иконки в верхнюю часть сайдбара, делая вид супер-компактным
+  "workbench.editor.editorActionsLocation": "titleBar",
+
+  // 3. БОКОВАЯ ПАНЕЛЬ И ПРОВОДНИК
   "workbench.sideBar.location": "left",
   "workbench.tree.enableStickyScroll": true,
-  "editor.stickyScroll.maxVisibleLines": 1,
   "workbench.tree.renderIndentGuides": "none",
-  "workbench.tree.indent": 12, // Чуть увеличил отступ для читаемости
-
-  // --- Проводник (Explorer) ---
+  "workbench.tree.indent": 12,
   "explorer.compactFolders": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
   "explorer.decorations.badges": false,
   "git.decorations.enabled": false,
 
-  // --- Окно и Зум ---
-"window.zoomLevel": 0.6,
+  // 4. ОКНО, МАСШТАБ И ШРИФТЫ
+  "window.zoomLevel": 0.6,
   "window.titleBarStyle": "native",
-
-  // --- Редактор: Шрифты и Курсор ---
   "editor.fontFamily": "Hack Nerd Font, Fira Code, 'Courier New', monospace",
-  "editor.fontSize": 12, // 10 слишком мелко при зуме 0.6, чуть поднял (можешь вернуть 10)
+  "editor.fontSize": 12,
   "editor.fontLigatures": true,
   "editor.lineHeight": 1.8,
 
-  // ! ВАЖНО: Исправление масштабирования скроллом (Cmd/Ctrl + колесо)
-  "editor.mouseWheelZoom": true,
-
-  // Плавность и анимации (для красоты)
-  "editor.smoothScrolling": true,
-  "editor.cursorBlinking": "smooth",
-  "editor.cursorSmoothCaretAnimation": "on",
-
-  // Настройки курсора
-  "editor.multiCursorModifier": "ctrlCmd",
+  // 5. НАСТРОЙКИ КУРСОРA (СТАТИЧНЫЙ ГРАДИЕНТ)
+  "editor.cursorBlinking": "solid",
+  "editor.cursorSmoothCaretAnimation": "explicit",
   "editor.cursorStyle": "line",
   "editor.cursorWidth": 2,
+  "editor.mouseWheelZoom": true,
+  "editor.smoothScrolling": true,
 
-  // --- Редактор: Чистота (отключение шума) ---
+  // 6. ПРЕДЛОЖЕНИЯ (ВАЖНО ДЛЯ ПОДСВЕТКИ ВНУТРИ СТРОК)
+  "editor.quickSuggestions": {
+    "other": "on",
+    "comments": "on",
+    "strings": "on" // Позволяет плагинам внедряться в строки
+  },
+
+  // 7. ОЧИСТКА РЕДАКТОРА
   "editor.stickyScroll.enabled": false,
-  "editor.colorDecorators": false, // Цветные квадратики у hex кодов
+  "editor.colorDecorators": false,
   "editor.codeLens": false,
-  "editor.links": false, // Кликабельные ссылки
+  "editor.links": false,
   "editor.matchBrackets": "never",
   "editor.parameterHints.enabled": false,
   "editor.lightbulb.enabled": "off",
-  "editor.hover.enabled": "off", // Всплывающие подсказки
+  "editor.hover.enabled": "off",
   "editor.guides.indentation": false,
   "editor.renderWhitespace": "none",
   "editor.renderLineHighlight": "none",
@@ -66,92 +64,60 @@
   "editor.selectionHighlight": false,
   "editor.hideCursorInOverviewRuler": true,
   "editor.showFoldingControls": "never",
-
-  // Скроллбары
   "editor.scrollbar.horizontal": "hidden",
   "editor.scrollbar.vertical": "hidden",
 
-  // --- Автодополнение и форматирование ---
+  // 8. ФОРМАТИРОВАНИЕ
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
   "files.autoSave": "afterDelay",
   "editor.tabSize": 4,
   "editor.detectIndentation": false,
-  "editor.quickSuggestions": {
-    "other": "on",
-    "comments": "on",
-    "strings": "on"
-  },
-  "editor.suggestOnTriggerCharacters": false,
   "editor.tabCompletion": "on",
-  "editor.snippetSuggestions": "top",
   "editor.acceptSuggestionOnEnter": "off",
   "emmet.triggerExpansionOnTab": true,
   "scm.diffDecorations": "none",
-  "extensions.ignoreRecommendations": true,
   "update.mode": "none",
 
-  // --- Custom UI Style (APC Extension) ---
+  // 9. APC CUSTOM UI (СТИЛИ И ГРАДИЕНТЫ)
   "custom-ui-style.electron": {
     "trafficLightPosition": { "x": 14, "y": 14 },
     "titleBarStyle": "hiddenInset",
-    /* Делает вкладки (tabs) более плоскими и сливающимися с фоном */
     ".tab": "border: none !important; background: transparent !important;",
     ".tab.active": "background: #1a1523 !important; border-bottom: 2px solid #DA70D6 !important;",
-
-    /* Полностью убирает линию разделения сайдбара */
     ".part.sidebar": "border-right: none !important;",
     ".monaco-separator": "display: none !important;"
   },
+
   "custom-ui-style.stylesheet": {
-    // Убирает лишние тени и отступы
-    ".notification-toast": "box-shadow: none !important",
-    ".monaco-workbench .quick-input-widget": "top: 20vh !important; transform: translateX(-50%) !important; left: 50% !important;",
-    ".quick-input-widget.show-file-icons": "box-shadow: none !important",
+    ".quick-input-widget": "top: 50% !important; left: 50% !important; transform: translate(-50%, -50%) !important; width: 600px !important; box-shadow: 0 0 100px rgba(0,0,0,0.8), 0 0 30px rgba(218, 112, 214, 0.2) !important; border-radius: 16px !important; border: 1px solid rgba(255, 255, 255, 0.1) !important; background-color: rgba(26, 21, 35, 0.95) !important; backdrop-filter: blur(20px);",
     ".quick-input-list .scrollbar": "display: none",
-    ".monaco-action-bar.quick-input-inline-action-bar": "display: none",
-    ".editor-widget.find-widget": "box-shadow: none; border-radius: 4px; border: none !important;",
     ".quick-input-titlebar": "display: none !important",
-
-    // Чистка сайдбара и заголовков
-    ".monaco-workbench .part.editor > .content .editor-group-container > .title.title-border-bottom:after": "display: none",
+    ".quick-input-header": "padding: 15px 20px !important;",
+    ".command-center": "width: 300px !important; background: rgba(255, 255, 255, 0.05) !important;",
+    ".command-center .command-center-center": "opacity: 1 !important;",
+    ".monaco-editor .cursors-layer .cursor": "background-image: linear-gradient(180deg, #ffaffc 0%, #DA70D6 100%); transition: left 0.1s ease-out, top 0.1s ease-out !important;",
+    ".monaco-editor .cursors-layer .cursor-primary": "transition: all 0.05s !important;",
+    ".title-actions": "opacity: 0; transition: opacity 0.2s ease !important;",
+    ".title-actions:hover": "opacity: 1 !important;",
     ".monaco-scrollable-element > .shadow.top": "display: none",
-    ".sidebar": "border: none !important",
-
-    // Убирает обводки фокуса
-    ".monaco-workbench .monaco-list:not(.element-focused):focus:before": "outline: none !important",
-    ".monaco-list-row.focused": "outline: none !important",
-
-    // Градиентный курсор (твоя фишка)
-    ".monaco-editor .cursors-layer .cursor": "background-image: linear-gradient(135deg, #ffaffc 10%, #DA70D6 100%); box-shadow: 0 0 15px #DA70D6;",
-
-    // Скрытие кнопок в заголовках
-    ".title-actions": "display: none !important",
-    ".monaco-workbench .part.editor > .content .editor-group-container > .title > .label-container > .title-label": "padding-left: 10px",
-
+    ".sidebar": "border: none !important"
   },
 
-  // --- Настройка цветов UI ---
+  // 10. ЦВЕТОВАЯ КАСТОМИЗАЦИЯ
   "workbench.colorCustomizations": {
-    "editorCursor.background": "#000000", // Нужно для работы CSS-курсора
+    "editorCursor.background": "#000000",
     "editorOverviewRuler.border": "#0000",
+    "commandCenter.background": "#00000000",
+    "commandCenter.border": "#00000000",
+    "widget.shadow": "#00000000"
+  },
 
-    // Скрываем все лишние подсветки в полосе прокрутки
-    "editorOverviewRuler.wordHighlightStrongForeground": "#0000",
-    "editorOverviewRuler.selectionHighlightForeground": "#0000",
-    "editorOverviewRuler.rangeHighlightForeground": "#0000",
-    "editorOverviewRuler.wordHighlightForeground": "#0000",
-    "editorOverviewRuler.bracketMatchForeground": "#0000",
-    "editorOverviewRuler.findMatchForeground": "#0000",
-    "editorOverviewRuler.modifiedForeground": "#0000",
-    "editorOverviewRuler.deletedForeground": "#0000",
-    "editorOverviewRuler.warningForeground": "#0000",
-    "editorOverviewRuler.addedForeground": "#0000",
-    "editorOverviewRuler.errorForeground": "#0000",
-    "editorOverviewRuler.infoForeground": "#0000",
-
-
-},
-
-"workbench.productIconTheme": "a-file-icon-vscode-product-icon-theme"
+  // 11. НАСТРОЙКА ЯЗЫКОВ ВНУТРИ СТРОК
+  // Чтобы работало, установите расширение: tobermory.es6-string-html
+  "es6-string-html.languages": {
+    "sql": ["sql", "SQL", "mysql", "postgresql", "pg", "query"],
+    "css": ["css", "CSS", "style", "styled"],
+    "html": ["html", "HTML", "xml"]
+  }
 }
